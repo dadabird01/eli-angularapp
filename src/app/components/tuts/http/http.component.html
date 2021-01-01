@@ -1,0 +1,14 @@
+<br />
+<br />
+<br />
+
+<!-- <pre *ngIf="data">{{ data[0].id | json }}</pre> -->
+
+<pre>{{ users$ | async | json }}</pre>
+{{ counter$ | async }}
+
+<div *ngIf="users$ | async as users">
+  <ul>
+    <li *ngFor="let user of users">{{ user.name}}</li>
+  </ul>
+</div>
